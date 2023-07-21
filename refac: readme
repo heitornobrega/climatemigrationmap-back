@@ -1,6 +1,5 @@
 
-# ClimateMigrationMap Backend (climatemigrationmap-back)
- 
+# ClimateMigrationMap (Backend) 
 ClimateMigrationMap Backend is the server-side component of the Climate Migration Map application. It serves as the data provider for the front-end (climatemigrationmap-web), allowing users to access historical and projected migration data between 1950 and 2101 for different countries. This project is an open-source initiative developed and maintained by Heitor Nóbrega Tico and Guillaume Lelasseur.
  
 ## Features (Planned)
