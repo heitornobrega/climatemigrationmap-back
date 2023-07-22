@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 import csv
 import os
 
-print(os.path.abspath('./migration.csv'))
+print(os.listdir('.'))
 
 app = Flask(__name__)
 
