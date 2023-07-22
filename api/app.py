@@ -2,14 +2,12 @@ from flask import Flask, jsonify, request
 import csv
 import os
 
-print(os.listdir('.'))
-
 app = Flask(__name__)
 
 def read_csv():
     data = {}
     group_by = request.args.get('group_by', default='country')
-    csv_file_path = os.path.abspath('./migration.csv')
+    csv_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "migration.csv")
     with open(csv_file_path, newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
