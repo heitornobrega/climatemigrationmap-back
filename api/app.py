@@ -6,7 +6,7 @@ app = Flask(__name__)
 def read_csv():
     data = {}
     group_by = request.args.get('group_by', default='country')
-    with open('../migration.csv', newline='') as csvfile:
+    with open('migration.csv', newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             country = row["Country or Area"]
