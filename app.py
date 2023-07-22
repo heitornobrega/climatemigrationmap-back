@@ -1,18 +1,35 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 import csv
 
 app = Flask(__name__)
 
 def read_csv():
-    data = []
-    with open('temperature.csv', newline='') as csvfile:
+    data = {}
+    group_by = request.args.get('group_by', default='country')
+    with open('temp_1.csv', newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            data.append(row)
+            country = row["Country or Area"]
+            year = row["Year(s)"]
+            migration = row["Value"]
+
+            if group_by == 'country':
+                if country in data:
+                    data[country].append({"Year": year, "Value": migration})
+                else:
+                    data[country] = [{"Year": year, "Value": migration}]
+            elif group_by == 'year':
+                if year in data:
+                    data[year][country] = migration
+                else:
+                    data[year] = {country: migration}
+            else:
+                return jsonify({"error": "Invalid 'group_by' value. Use 'country' or 'year'."}), 400
+
     return data
 
-@app.route('/temperature', methods=['GET'])
-def get_temperature():
+@app.route('/migration', methods=['GET'])
+def get_migration():
     data = read_csv()
     return jsonify(data)
 
