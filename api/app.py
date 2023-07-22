@@ -1,8 +1,10 @@
 from flask import Flask, jsonify, request
 import csv
 import os
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 def read_csv():
     data = {}
