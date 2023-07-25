@@ -1,70 +1,61 @@
+# World Migration Map Backend
 
-# ClimateMigrationMap (Backend) 
-ClimateMigrationMap Backend is the server-side component of the Climate Migration Map application. It serves as the data provider for the front-end (climatemigrationmap-web), allowing users to access historical and projected migration data between 1950 and 2101 for different countries. This project is an open-source initiative developed and maintained by Heitor Nóbrega Tico and Guillaume Lelasseur.
- 
-## Features (Planned)
- 
-- **Data API**: Provides RESTful API endpoints to fetch historical migration data and climate change projections.
-- **Data Processing**: Handles the logic to process and filter migration data based on user requests.
-- **Secure Communication**: Ensures secure communication between the front-end and the backend using standard authentication and encryption mechanisms.
- 
-Our objective is to create an accessible and informative tool that raises awareness about climate migration and its global impact.
- 
+World Migration Map Backend is the server-side component of the World Migration Map application, built using Python with the Flex framework. It is an open-source project developed by Heitor Nóbrega Tico and Guillaume Lelasseur. The backend serves as the data processing and API server, providing necessary information to the frontend for visualizing historical migration trends on the interactive world map.
+
+## Features
+
+- **Data Processing**: The backend processes historical migration data and events to provide meaningful information for the frontend visualization.
+- **API Endpoints**: Offers various API endpoints to fetch migration data, event details, and other relevant information required for the frontend.
+- **Database Connectivity**: Utilizes a database (such as MySQL, PostgreSQL, or others) to store and retrieve migration data efficiently.
+
 ## Getting Started with Development
- 
-This project uses Flask, a micro web framework for Python, for building the backend. To get started with development, you'll need to have Python and the required dependencies installed on your machine. Follow these steps to set up the development environment:
- 
+
+To set up the World Migration Map Backend development environment, follow the steps below:
+
 1. Clone this repository:
- 
-    ```
-    git clone https://github.com/heitor-nobrega/climatemigrationmap-back.git
-    ```
- 
+
+   ```
+   git clone https://github.com/guillaume971/worldmigrationmap-backend.git
+   ```
+
 2. Navigate to the project directory:
- 
-    ```
-    cd climatemigrationmap-back
-    ```
- 
-3. Create and activate a virtual environment (optional but recommended):
- 
-    ```
-    python -m venv venv
-    source venv/bin/activate  # On Windows: venv\Scripts\activate
-    ```
- 
-4. Install the project dependencies:
- 
-    ```
-    pip install -r requirements.txt
-    ```
- 
-5. Set up environment variables (if required):
- 
-   You may need to configure environment variables for any sensitive information, such as API keys or database credentials.
- 
-6. Start the development server:
- 
-    ```
-    python app.py
-    ```
- 
-This will start the backend server, and it will be accessible at `http://localhost:5000`.
- 
+
+   ```
+   cd worldmigrationmap-backend
+   ```
+
+3. Install the required Python packages:
+
+   ```
+   pip install -r requirements.txt
+   ```
+
+4. Set up the database: [Provide instructions here on how to set up and configure the database used for the project.]
+
+5. Configure environment variables: [Explain what environment variables need to be set and where they can be found or created.]
+
+6. Start the backend server:
+
+   ```
+   python app.py
+   ```
+
+The backend server will now be running and ready to serve API requests.
+
 ## Contributing
- 
-We welcome contributions from the open-source community to make this project even more valuable and impactful. To contribute, please follow these steps:
- 
+
+Contributions from the open-source community are highly appreciated. If you would like to contribute to the World Migration Map Backend, follow these steps:
+
 1. Fork this repository to your GitHub account.
-2. Create a new branch with a descriptive name for your feature/bugfix.
-3. Make your changes and commit them with clear commit messages.
+2. Create a new branch with a descriptive name for your feature or bugfix.
+3. Implement your changes and commit them with comprehensive commit messages.
 4. Push your branch to your forked repository.
-5. Create a pull request (PR) to the main repository, explaining your changes.
- 
+5. Create a pull request (PR) to the main repository, explaining your changes in detail.
+
 ## License
- 
-This project is licensed under the [MIT License](LICENSE.md). By contributing to this project, you agree to abide by the terms of the license.
- 
+
+This project is licensed under the [MIT License](LICENSE.md). By contributing, you agree to abide by the terms of this license.
+
 ## Contact
- 
-For any questions, issues, or inquiries related to this project, feel free to reach out to the development team. We value community feedback and appreciate your support!
+
+If you have any questions, encounter issues, or want to share suggestions regarding the backend of the World Migration Map, please feel free to reach out to Heitor Nóbrega Tico or Guillaume Lelasseur. You can also visit our sponsor [Paradigme Mode](https://www.paradigmemode.com) for further inquiries. We value community feedback and look forward to your valuable insights!
