@@ -15,7 +15,7 @@ To set up the World Migration Map Backend development environment, follow the st
 1. Clone this repository:
 
    ```
-   git clone https://github.com/guillaume971/worldmigrationmap-backend.git
+   git clone https://github.com/heitornobrega/worldmigrationmap-back.git
    ```
 
 2. Navigate to the project directory:
@@ -30,14 +30,10 @@ To set up the World Migration Map Backend development environment, follow the st
    pip install -r requirements.txt
    ```
 
-4. Set up the database: [Provide instructions here on how to set up and configure the database used for the project.]
-
-5. Configure environment variables: [Explain what environment variables need to be set and where they can be found or created.]
-
-6. Start the backend server:
+4. Start the backend server:
 
    ```
-   python app.py
+   cd /api && python app.py
    ```
 
 The backend server will now be running and ready to serve API requests.
